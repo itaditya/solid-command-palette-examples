@@ -21,7 +21,9 @@ const App = () => {
     <div class="my-app">
       <Root actions={actions} actionsContext={actionsContext}>
         <CommandPalette />
-        <h2>Current Count is {count()}</h2>
+        <h2>Open it with CMD + K</h2>
+        <p>Current Count is {count()}</p>
+        <p>Increment Count by pressing CMD + E</p>
       </Root>
     </div>
   );
