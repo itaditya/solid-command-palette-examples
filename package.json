@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "fuse.js": "^6.5.3",
-    "solid-command-palette": "^0.0.3",
+    "solid-command-palette": "^0.0.4",
     "solid-js": "^1.3.2",
     "solid-transition-group": "0.0.8",
     "tinykeys": "^1.4.0",
