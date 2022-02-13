@@ -3,8 +3,8 @@ import { defineAction } from 'solid-command-palette';
 const minimalAction = defineAction({
   id: 'minimal',
   title: 'Minimal Action',
-  run: () => {
-    console.log('ran minimal action');
+  run: ({ actionId }) => {
+    console.log('ran action', actionId);
   },
 });
 
@@ -14,7 +14,11 @@ const incrementCounterAction = defineAction({
   subtitle: 'Press CMD + E to trigger this.',
   shortcut: '$mod+e', // $mod = Command on Mac & Control on Windows.
   run: ({ rootContext }) => {
-    rootContext.increment();
+    const increment = rootContext.increment;
+
+    if (typeof increment === 'function') {
+      increment();
+    }
   },
 });
 
